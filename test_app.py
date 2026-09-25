@@ -8,3 +8,6 @@ def test_health():
     response = client.get("/health")
     assert response.status_code == 200
     assert response.data == b"ok"
+
+def test_add_negative():
+    assert add(-1, 1) == 0
